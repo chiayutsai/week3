@@ -1,0 +1,150 @@
+@import "../components/series-item";
+@import "../components/pagination";
+.series-nav{
+    max-width: 1386px;
+    margin: 0 auto;
+}
+.series-nav-item{
+    font-size: 42px;
+    border:1px solid #dcdcdc;
+    position: relative;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 16px;
+        background-color: $primary-color;
+        display: block;
+        position: absolute;
+        transition: all 0.5s;
+        bottom: 0;
+        opacity:0;
+    }
+    &:hover{
+        &::after{
+            opacity:1;
+        }
+    }
+   a{
+       padding: 24px 0;
+       line-height: 1;
+       &::before{
+        content: '';
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        position: relative;
+        top: 6px;
+       }
+   }
+}
+.series-nav-item.active{
+    &::after{
+        opacity:1;
+    }
+}
+.series-nav-item__first{
+    &::before{
+        background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-diamond-black.svg') no-repeat center;
+        background-size: contain;
+    }
+}
+.series-nav-item__second{
+    &::before{
+      
+        background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-sun-black.svg') no-repeat center;
+        background-size: contain;
+    
+    }
+}
+.series-nav-item__third{
+    &::before{
+      
+        background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-thunder-black.svg') no-repeat center;
+        background-size: contain;
+    
+    }
+}
+.series-banner{
+    height: 309px;
+   margin-bottom: 88px;
+}
+.series-banner__item1{
+    height: 100%;
+    background: url(https://github.com/chiayutsai/-/blob/master/image/series2.jpg?raw=true) no-repeat center;
+    background-size: cover;
+    
+}
+.series-banner__item2{
+    height: 100%;
+    background: url(https://github.com/chiayutsai/-/blob/master/image/series1.jpg?raw=true) no-repeat center;
+    background-size: cover;
+}
+.series-banner__item3{
+    height: 100%;
+    background: url(https://github.com/chiayutsai/-/blob/master/image/series3.jpg?raw=true) no-repeat center;
+    background-size: cover;
+    
+}
+.series-banner__item4{
+    height: 100%;
+    background: url(https://github.com/chiayutsai/-/blob/master/image/series4.jpg?raw=true) no-repeat 50% 30%;
+    background-size: cover;
+}
+@media (max-width:1024px){
+    .series-nav{
+        max-width: 100%;
+     
+    }
+    .series-nav-item{
+        font-size: 28px;
+        &::after{
+          
+            height: 8px;
+        
+        }
+       a{
+           padding: 16px 0;
+     
+           &::before{
+           
+            width:32px;
+            height: 32px;
+          
+           }
+       }
+    }
+    .series-banner{
+        margin-bottom: 40px;
+      
+    }
+}
+@media (max-width:576px){
+    .series-nav-item{
+        font-size: 14px;
+        &::after{
+          
+            height: 4px;
+        
+        }
+       a{
+           padding: 8px 0;
+     
+           &::before{
+           
+            width:16px;
+            height: 16px;
+            top: 3px;
+           }
+       }
+    }
+    .series-banner{
+        margin-bottom: 30px;
+      
+    }
+}
+@media (max-width:375px){
+    .series-banner{
+       height: 144px;
+      
+    } 
+}

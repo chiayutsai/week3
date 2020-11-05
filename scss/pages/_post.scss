@@ -1,0 +1,323 @@
+.post-inner-nav{
+    margin-bottom: 8px;
+}
+.breadcrumbs{
+    display: flex;
+    margin-bottom: 16px;
+    li{
+       &:not(:last-child){
+            a{
+                &::after{
+                content:'/';
+                margin: 0 5px;
+                }
+            }
+        }
+        &:last-child{
+            a{
+                color:$primary-color
+            }
+        }
+    }
+    a{
+        color:#000;
+        transition: all 0.5s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+.post-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 304px;
+    position: relative;
+    a{
+        transition: all 0.5s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+.post-content{
+    margin-right: 30px;
+    width: 70%;
+    img{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+.post_tag{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        margin-right: 16px;
+        a{
+            color:$primary-color;
+            font-weight: bold;
+            font-size: 24px;
+            font-family: 'Roboto',sans-serif;
+        }
+    }
+}
+.post-extrainfro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    p{
+        font-size: 28px;
+        font-family: 'Roboto',sans-serif;
+        font-weight: 500;
+    }
+    .post-date{
+        font-size: 16px;
+        color:#6C6C6C;
+    }
+}
+.post-text{
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.6;
+    margin-bottom: 36px;
+}
+.post-share{
+   display: flex;
+   padding-bottom: 16px;
+   
+  
+}
+.post-control{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border-top: 1px solid #000;
+   padding-top: 24px;
+   a{
+    color:#000;
+   }
+}
+.post-prev{
+   a{
+    &::before{
+        content: '';
+        width: 24px;
+        height: 21px;
+        background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-undo.svg) no-repeat center;
+        background-size: contain;
+        display: inline-block;
+        margin-right: 8px;
+    }
+}
+}
+.post-next{
+  a{
+    &::after{
+        content: '';
+        width: 24px;
+        height: 21px;
+        background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-redo.svg) no-repeat center;
+        background-size: contain;
+        display: inline-block;
+        margin-left: 8px;
+    }
+}
+}
+.post-sidebar{
+    width: 30%;
+    P{
+        margin-bottom: 10px;
+        &::before{
+            content:'';
+            width: 48px;
+            height: 48px;
+            background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-tag.svg) no-repeat center;
+            background-size: contain;
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+            top: 15px;
+        }
+    }
+}
+.tag-list{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+        color:$primary-color;
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 24px;
+        font-family: 'Roboto',sans-serif;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width:1024px){
+    .breadcrumbs{    
+        margin-bottom: 8px;
+        a{
+       font-size: 14px;
+        }
+    }
+    .post-main{
+      
+        margin-bottom: 148px;
+     
+    }
+    .post-content{
+     
+        img{
+        
+            margin-bottom: 16px;
+        }
+    }
+    .post_tag{
+     
+        li{
+            margin-right: 8px;
+            a{
+              
+                font-size: 16px;
+               
+            }
+        }
+    }
+    .post-extrainfro{
+     
+        margin-bottom: 16px;
+        p{
+            font-size: 16px;
+           
+        }
+        .post-date{
+            font-size: 14px;
+            
+        }
+    }
+    .post-text{
+        font-size: 16px;
+        margin-bottom:24px;
+    }
+    .post-share{
+       
+        a{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .post-control{
+        padding-top: 16px;
+        font-size: 16px;
+        position: absolute;
+        width: 100%;
+      
+    }
+    .post-sidebar{
+        
+        P{
+            margin-bottom: 6px;
+            &::before{
+               
+                width: 24px;
+                height: 24px;
+               
+                margin-right: 0px;
+               
+                top: 6px;
+            }
+        }
+    }
+    .tag-list{
+   
+        a{
+            font-size: 16px;
+            margin-right: 16px;
+            margin-bottom:0px;
+        }
+    }
+}
+
+@media (max-width:576px){
+    .post-main{
+        flex-direction: column;
+    }
+    .post_tag{
+     
+        li{
+            margin-right: 0px;
+            a{
+              
+                font-size: 14px;
+               
+            }
+        }
+    }
+    .post-content{
+        width: 100%;
+        h2{
+            color:$title-color;
+        }
+    }
+    .post-extrainfro{
+     
+        margin-bottom:20px;
+        p{
+            font-size: 14px;
+           
+        }
+     
+    }
+    .post-control{
+        padding-top:8px;
+        font-size: 14px;
+        position: relative;
+        flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    .post-prev{
+        margin-bottom: 10px;
+        a{
+         &::before{
+             content: '';
+             width:16px;
+             height:14px;
+             background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-undo.svg) no-repeat center;
+             background-size: contain;
+             display: inline-block;
+             margin-right: 8px;
+         }
+     }
+     }
+     .post-next{
+       a{
+         &::after{
+            display: none;
+         }
+         &::before{
+            content: '';
+            width:16px;
+            height:14px;
+            background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-redo.svg) no-repeat center;
+            background-size: contain;
+            display: inline-block;
+            margin-right: 8px;
+        }
+     }
+     }
+     .post-sidebar{   
+         width: 100%;
+        P{
+            margin-bottom: 10px;
+        }
+    }
+    .tag-list{
+   
+        a{
+          
+            margin-right:8px;
+        
+        }
+    }
+}

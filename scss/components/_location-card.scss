@@ -1,0 +1,113 @@
+.location-card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, 100px);
+    margin-bottom: 272px;
+}
+
+.location-card__item{
+    width: 30%;
+  margin-bottom: 32px;
+  img{
+      width: 100%;
+  }
+}
+
+.location-card__item:last-child:nth-child(3n - 1) {
+    margin-right: calc(30% + 10% / 2);
+}
+.location-card__title{
+    font-size: 24px;
+    border: 1px solid #00000020;
+    padding: 12px 24px;
+    color:#000;
+    font-weight: normal;
+}
+.location-card_detaii{
+    padding: 16px 24px;
+    border: 1px solid #00000020;
+    li{
+       display: flex;
+        font-size: 20px;
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+        &::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin-right: 12px;
+        position: relative;
+        top: 4px;
+        }
+    }
+}
+.location-card__phone::before{
+    background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-phone.svg) no-repeat center;
+    background-size: contain;
+}
+.location-card__time::before{
+    background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-clock.svg) no-repeat center;
+    background-size: contain;
+}
+.location-card__address::before{
+    background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-map.svg) no-repeat center;
+    background-size: contain;
+ 
+}
+.location-card_button{
+    background-color: #000;
+    border: 1px solid #00000020;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.5s;
+    &:hover{
+        background-color: rgba(0,0,0,0.5);
+        box-shadow: inset 2px 2px 5px #000;
+    }
+}
+
+@media (max-width:1024px){
+    .location-card{
+    
+        margin-bottom: 84px;
+    }
+    .location-card__item{
+        width: 48%;
+       
+      margin-bottom: 20px;
+    }
+    .location-card__item:last-child:nth-child(3n - 1) {
+        margin-right: 0
+    }
+    .location-card__title{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .location-card_detaii{
+        padding: 16px;
+        li{
+            font-size: 14px;
+        }
+    }
+  
+    .location-card_button{
+        font-size: 14px;
+        padding: 16px 0;
+    }
+}
+
+@media (max-width:576px){
+    .location-card{
+    
+        margin-bottom: 40px;
+    }
+    .location-card__item{
+        width: 100%;
+       
+      margin-bottom: 16px;
+    }
+}
